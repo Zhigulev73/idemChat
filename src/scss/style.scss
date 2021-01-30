@@ -22,21 +22,22 @@
 }
 .container{
   display: flex;
-  justify-content: center;
 }
 .section{
-  margin: 200px;
   width: 717px;
   background: url("../img/image.png") no-repeat;
-
+  display: block;
+  margin: 100px auto auto;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.5);
 }
-input{
+textarea{
   width: 590px;
   height: 129px;
   border: 1px solid #DBDBDB;
   box-sizing: border-box;
   border-radius: 4px;
   margin-top: 20px;
+  padding-bottom: 100px;
 }
 button{
   width: 144px;
@@ -50,34 +51,79 @@ button{
   font-size: 16px;
   line-height: 24px;
   color: white;
+  &:hover{
+    cursor: pointer;
+  }
 }
 .messages-sends{
   display: flex;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 20px;
 }
 .messages-right{
-  margin-top: 100px;
+  margin-top: 120px;
+  float: right;
+}
+.messages-left{
+  margin-right: 200px;
 }
 .messages{
   height: 517px;
   word-wrap:break-word;
   overflow: auto;
 }
-.profileImage{
-  width: 47px;
-  height: 47px;
-  margin-left: 20px;
-  margin-right: 20px;
+.data {
+  overflow: hidden;
+  text-align: center;
+  margin-top: 20px;
+  :before {
+    content: '';
+    margin-left: -100%;
+    left: -14px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 350px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+  }
+    :after {
+      content: '';
+      margin-right: -100%;
+      right: -14px;
+      display: inline-block;
+      vertical-align: middle;
+      width: 350px;
+      height: 2px;
+      background-color: white;
+      position: relative;
+    }
+  }
+
+  .messages-date {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .profileImage {
+    width: 47px;
+    height: 47px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .messages-text {
+    font-family: 'Roboto Regular', sans-serif;
+    background: #F1F3F5;
+    border-radius: 5px;
+    padding: 15px;
+  }
+.messages-second{
+  margin-top: 20px;
 }
-.messages-text{
-  font-family: 'Roboto Regular', sans-serif;
-  max-width: 60%;
-  background: #F1F3F5;
-  border-radius: 5px;
-  padding: 15px;
+.messages-third{
+  margin-top: 90px;
 }
-.sendMessage{
-  border-top: 1px solid #fff;
-  padding-left: 20px;
-}
+  .sendMessage {
+    border-top: 1px solid #fff;
+    padding: 20px;
+  }
